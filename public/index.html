@@ -9,6 +9,7 @@
     <title>AquaTech | Página Inicial</title>
 
     <script src="./js/sessao.js"></script>
+    <script src="./js/carrossel.js"></script>
 
     <link rel="stylesheet" href="./css/estilo.css">
     <link rel="icon" href="./assets/icon/hp-icon.jpg">
@@ -68,21 +69,31 @@
         <div class="boxes">
           <div class="box">
             <h1>Casas de Hogwarts</h1>
+            <div class="carrossel-casas">
 
-            <div class="card-casas-layout">
-              <div class="casas-img">
-                <img class="brasao-img" src="./assets/imgs/grifinoria.png" alt="">
+              <button onclick="voltar_carrossel()">
+                <img id="seta-esquerda" src="./assets/imgs/seta-esquerda.png" alt="">
+              </button>
+
+              <div id="card-casas-wrapper" class="card-casas-layout">
+                <div id="img_casas_wrapper" class="casas-img">
+                  <img id="img_casa" class="brasao-img" src="./assets/imgs/grifinoria.png" alt="">
+                </div>
+                <div class="card-casa-content">
+                  <span class="titulo-card"></span>
+                  <h2 id="titulo_casa">Grifinória</h2>
+                  <p id="desc_casa">
+                    Fundada por Godric Gryffindor, a casa preza pela coragem, bravura e determinação. 
+                    Seus membros são conhecidos por sua ousadia, resiliência e cavalheirismo em face do perigo ou para ajudar os outros.
+                  </p>
+                </div>
               </div>
-              <div class="card-casa-content">
-                <span class="titulo-card"></span>
-                <h2>Grifinória</h2>
-                <p>
-                  Fundada por Godric Gryffindor, a casa preza pela coragem, bravura e determinação. 
-                  Seus membros são conhecidos por sua ousadia e cavalheirismo em face do perigo.
-                </p>
-              </div>
+
+              <button onclick="seguir_carrossel()">
+                <img id="seta-direita" src="./assets/imgs/seta-direita.png" alt="">
+              </button>
+
             </div>
-
           </div>
         </div>
       </div>
@@ -94,17 +105,17 @@
               <div class="personagem">
                 <img  src="./assets/imgs/hermione.png" alt="">
                 <h2>Hermione Granger</h2>
-                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra nisl sit amet varius accumsan. Morbi neque urna, porta sit amet sodales in, tristique et dui.</h3>
+                <h3>Hermione Granger é uma bruxa nascida trouxa, conhecida por sua inteligência excepcional e coragem, sendo crucial para o sucesso de Harry Potter contra Voldemort.</h3>
               </div>
               <div class="personagem">
                 <img src="./assets/imgs/harrypotter.png" alt="">
                 <h2>Harry Potter</h2>
-                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra nisl sit amet varius accumsan. Morbi neque urna, porta sit amet sodales in, tristique et dui.</h3>
+                <h3>Um bruxo órfão, famoso por sobreviver ao ataque de Lord Voldemort ainda bebê. Criado por trouxas, se descobre bruxo e vai à Hogwarts, se tornando um herói.</h3>
               </div>
               <div class="personagem">
                 <img src="./assets/imgs/roneywesley.png" alt="">
-                <h2>Roney Wesley</h2>
-                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pharetra nisl sit amet varius accumsan. Morbi neque urna, porta sit amet sodales in, tristique et dui.</h3>
+                <h2>Rony Wesley</h2>
+                <h3>Bruxo sangue-puro, Rony é leal, corajoso, mas também inseguro por viver à sombra dos irmãos e de Harry.</h3>
               </div>
             </div>
           </div>

@@ -12,6 +12,12 @@ body {
   
 }
 
+h1 {
+  font-family: 'HarryPotter';
+  font-size: 60px;
+  color: #f2e3ff;
+}
+
 :root {
   --tamanho-header: 80px;
   --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
@@ -128,9 +134,9 @@ body {
 .card-casas-layout {
   display: flex;
   width: 600px;
-  background: rgba(255, 255, 255, 0.03); /* Efeito Vidro */
+  background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(116, 0, 1, 0.3); /* Borda vinho sutil */
+  border: 3px solid rgba(116, 0, 1, 0.3);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -194,6 +200,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 400px;
 }
 
 .social .container .boxes {
@@ -211,6 +218,31 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.carrossel-casas{
+  display: flex; 
+  flex-direction: row; 
+  align-items: center;
+}
+
+.carrossel-casas button{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.carrossel-casas button:hover{
+  transform: scale(110%);
+}
+
+#seta-esquerda{
+  width: 100px;
+  height: 100px;
+}
+#seta-direita{
+  width: 100px;
+  height: 100px;
 }
 
 .secao1{

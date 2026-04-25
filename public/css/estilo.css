@@ -203,6 +203,15 @@ h1 {
   width: 400px;
 }
 
+.personagem h2 {
+  color: rgb(255, 244, 244);
+}
+
+.personagem h3{
+  color: rgb(239, 224, 255);
+  text-align: justify;
+}
+
 .social .container .boxes {
   display: flex;
   justify-content: center;
@@ -259,7 +268,7 @@ h1 {
 /* FOOTER */
 
 .footer {
-  background-color: #32b9cd;
+  background-color: var(--roxo-padrao);
   height: 150px;
   color: #fff;
   display: flex;

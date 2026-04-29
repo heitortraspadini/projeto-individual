@@ -2,133 +2,139 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AquaTech | Página Inicial</title>
+  <title>AquaTech | Página Inicial</title>
 
-    <script src="./js/sessao.js"></script>
-    <script src="./js/carrossel.js"></script>
+  <script src="./js/sessao.js"></script>
+  <script src="./js/carrossel.js"></script>
 
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="icon" href="./assets/icon/hp-icon.jpg">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="./css/estilo.css">
+  <link rel="icon" href="./assets/icon/hp-icon.jpg">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
 <body>
-    <div class="header">
-      <div class="container">
-        <img src="./assets/imgs/header-logo.png" alt="">
-        <ul class="navbar">
-          <li class="agora">
-            <a href="#">Home</a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="login.html">Login</a>
-          </li>
-          <li>
-            <a href="cadastro.html">Cadastro</a>
-          </li>
-        </ul>
+  <div class="header">
+    <div class="container">
+      <img src="./assets/imgs/header-logo.png" alt="">
+      <ul class="navbar">
+        <li class="agora">
+          <a href="#">Início</a>
+        </li>
+        <li>|</li>
+        <li>
+          <a href="login.html">Login</a>
+        </li>
+        <li>
+          <a href="cadastro.html">Cadastro</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="banner">
+    <div class="container">
+      <p>BEM-VINDO AO MUNDO BRUXO!</p>
+    </div>
+  </div>
+
+  <div class="social">
+    <div class="container secao1">
+      <div class="boxes">
+        <div class="box ">
+          <h1>Um Mundo Escondido</h1>
+          <p>Entre ruas comuns e lugares aparentemente normais, existe um universo mágico escondido à vista de todos.
+            Bruxos e bruxas convivem em segredo, usam feitiços, objetos encantados e regras próprias para manter o mundo
+            mágico protegido dos trouxas.</p>
+          <p>Essa separação cria uma história cheia de mistério, tradição e descobertas, onde cada detalhe do cotidiano
+            pode esconder uma porta para algo extraordinário.</p>
+        </div>
       </div>
     </div>
-  
-    <div class="banner">
-      <div class="container">
-        <p>BEM-VINDO(A) AO MUNDO BRUXO!</p>
-      </div>
-    </div>
-  
-    <div class="social">
-      <div class="container secao1">
-        <div class="boxes">
-          <div class="box ">
-            <h1>Um Mundo Escondido</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
+    <div class="container secao2">
+      <div class="boxes">
+        <div class="box box-hogwarts">
+          <h1>Hogwarts</h1>
+          <div class="hogwarts-section">
+            <img src="./assets/imgs/social-hogwarts.png" alt="">
+            <p>Hogwarts é a escola mais famosa do universo bruxo e o principal cenário da saga. O castelo reúne salas
+              encantadas, corredores secretos, aulas de magia e a tradicional divisão entre Grifinória, Sonserina,
+              Corvinal e Lufa-Lufa.</p>
           </div>
         </div>
       </div>
-      <div class="container secao2">
-        <div class="boxes">
-          <div class="box">
-            <h1>Hogwarts</h1>
-            <div class="hogwarts-section">
-              <img src="./assets/imgs/social-hogwarts.png" alt="">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-                vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-                minima.</p>
+    </div>
+    <div class="container secao1">
+      <div class="boxes">
+        <div class="box">
+          <h1>Casas de Hogwarts</h1>
+          <div class="carrossel-casas">
+
+            <button onclick="voltar_carrossel()">
+              <img id="seta-esquerda" src="./assets/imgs/seta-esquerda.png" alt="">
+            </button>
+
+            <div id="card-casas-wrapper" class="card-casas-layout">
+              <div id="img_casas_wrapper" class="casas-img">
+                <img id="img_casa" class="brasao-img" src="./assets/imgs/grifinoria.png" alt="">
+              </div>
+              <div class="card-casa-content">
+                <span class="titulo-card"></span>
+                <h2 id="titulo_casa">Grifinória</h2>
+                <p id="desc_casa">
+                  Fundada por Godric Gryffindor, a casa preza pela coragem, bravura e determinação.
+                  Seus membros são conhecidos por sua ousadia, resiliência e cavalheirismo em face do perigo ou para
+                  ajudar os outros.
+                </p>
+              </div>
+            </div>
+
+            <button onclick="seguir_carrossel()">
+              <img id="seta-direita" src="./assets/imgs/seta-direita.png" alt="">
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container secao2">
+      <div class="boxes">
+        <div class="box ">
+          <h1>Personagens Principais</h1>
+          <div class="protagonistas">
+            <div class="personagem">
+              <img src="./assets/imgs/hermione.png" alt="">
+              <h2>Hermione Granger</h2>
+              <h3>Hermione Granger é uma bruxa nascida trouxa, conhecida por sua inteligência excepcional e coragem,
+                sendo crucial para o sucesso de Harry Potter contra Voldemort.</h3>
+            </div>
+            <div class="personagem">
+              <img src="./assets/imgs/harrypotter.png" alt="">
+              <h2>Harry Potter</h2>
+              <h3>Um bruxo órfão, famoso por sobreviver ao ataque de Lord Voldemort ainda bebê. Criado por trouxas, se
+                descobre bruxo e vai à Hogwarts, se tornando um herói.</h3>
+            </div>
+            <div class="personagem">
+              <img src="./assets/imgs/roneywesley.png" alt="">
+              <h2>Rony Wesley</h2>
+              <h3>Bruxo sangue-puro, Rony é leal, corajoso, mas também inseguro por viver à sombra dos irmãos e de
+                Harry.</h3>
             </div>
           </div>
         </div>
       </div>
-      <div class="container secao1">
-        <div class="boxes">
-          <div class="box">
-            <h1>Casas de Hogwarts</h1>
-            <div class="carrossel-casas">
-
-              <button onclick="voltar_carrossel()">
-                <img id="seta-esquerda" src="./assets/imgs/seta-esquerda.png" alt="">
-              </button>
-
-              <div id="card-casas-wrapper" class="card-casas-layout">
-                <div id="img_casas_wrapper" class="casas-img">
-                  <img id="img_casa" class="brasao-img" src="./assets/imgs/grifinoria.png" alt="">
-                </div>
-                <div class="card-casa-content">
-                  <span class="titulo-card"></span>
-                  <h2 id="titulo_casa">Grifinória</h2>
-                  <p id="desc_casa">
-                    Fundada por Godric Gryffindor, a casa preza pela coragem, bravura e determinação. 
-                    Seus membros são conhecidos por sua ousadia, resiliência e cavalheirismo em face do perigo ou para ajudar os outros.
-                  </p>
-                </div>
-              </div>
-
-              <button onclick="seguir_carrossel()">
-                <img id="seta-direita" src="./assets/imgs/seta-direita.png" alt="">
-              </button>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container secao2">
-        <div class="boxes">
-          <div class="box ">
-            <h1>Personagens Principais</h1>
-            <div class="protagonistas">
-              <div class="personagem">
-                <img  src="./assets/imgs/hermione.png" alt="">
-                <h2>Hermione Granger</h2>
-                <h3>Hermione Granger é uma bruxa nascida trouxa, conhecida por sua inteligência excepcional e coragem, sendo crucial para o sucesso de Harry Potter contra Voldemort.</h3>
-              </div>
-              <div class="personagem">
-                <img src="./assets/imgs/harrypotter.png" alt="">
-                <h2>Harry Potter</h2>
-                <h3>Um bruxo órfão, famoso por sobreviver ao ataque de Lord Voldemort ainda bebê. Criado por trouxas, se descobre bruxo e vai à Hogwarts, se tornando um herói.</h3>
-              </div>
-              <div class="personagem">
-                <img src="./assets/imgs/roneywesley.png" alt="">
-                <h2>Rony Wesley</h2>
-                <h3>Bruxo sangue-puro, Rony é leal, corajoso, mas também inseguro por viver à sombra dos irmãos e de Harry.</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  
-    <div class="footer">
-      <div class="container">
-        <h4>Feito com magia por Heitor Galdino Traspadini</h4>
-        <span class="version">v1.0.0</span>
-      </div>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <h4>Feito com magia por Heitor Galdino Traspadini</h4>
+      <span class="version">v1.0.0</span>
     </div>
-  </body>
+  </div>
+</body>
 
 </html>

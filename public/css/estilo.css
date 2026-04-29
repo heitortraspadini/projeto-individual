@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @font-face {
   font-family: 'HarryPotter';
   src: url('../assets/fonts/HARRYP__.TTF');
@@ -9,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
+
 }
 
 h1 {
@@ -47,7 +48,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  
+
 }
 
 .header a {
@@ -55,7 +56,7 @@ h1 {
   color: #e3b062;
 }
 
-.header img{
+.header img {
   height: 80%;
 }
 
@@ -86,12 +87,29 @@ h1 {
 
 .banner {
   height: var(--tamanho-banner);
+  position: relative;
+  overflow: hidden;
   color: white;
   background-image: url('../assets/imgs/hero-img.png');
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 180px;
+  background: linear-gradient(to bottom, rgba(31, 1, 58, 0) 0%, rgba(31, 1, 58, 0.65) 55%, rgba(31, 1, 58, 1) 100%);
+  pointer-events: none;
 }
 
 .banner .container {
+  position: relative;
+  z-index: 1;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -126,14 +144,14 @@ h1 {
   width: 500px;
 }
 
-.hogwarts-section{
+.hogwarts-section {
   display: flex;
   flex-direction: row;
 }
 
 .card-casas-layout {
   display: flex;
-  width: 600px;
+  width: 50rem;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(12px);
   border: 3px solid rgba(116, 0, 1, 0.3);
@@ -165,7 +183,8 @@ h1 {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #D3A625; /* Dourado */
+  color: #D3A625;
+  /* Dourado */
 }
 
 .card-casas-layout h2 {
@@ -173,30 +192,30 @@ h1 {
   font-size: 2.2rem;
   margin: 10px 0;
   color: #eee;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .card-casas-layout p {
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   line-height: 1.6;
   color: #ccc;
   margin-bottom: 25px;
 }
 
-.protagonistas{
+.protagonistas {
   display: flex;
   flex-direction: row;
   gap: 100px;
 }
 
-.protagonistas img{
+.protagonistas img {
   height: 400px;
   width: 300px;
   object-fit: cover;
   border-radius: 5px;
 }
 
-.personagem{
+.personagem {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -207,7 +226,7 @@ h1 {
   color: rgb(255, 244, 244);
 }
 
-.personagem h3{
+.personagem h3 {
   color: rgb(239, 224, 255);
   text-align: justify;
 }
@@ -219,8 +238,21 @@ h1 {
   padding: 30px;
 }
 
+.social .box {
+  max-width: 1100px;
+  gap: 18px;
+}
+
 .social p {
   text-align: center;
+  max-width: 900px;
+  line-height: 1.7;
+  color: #f0e8ff;
+}
+
+.secao1 .box p,
+.secao2 .box p {
+  margin: 0;
 }
 
 .box {
@@ -229,42 +261,143 @@ h1 {
   align-items: center;
 }
 
-.carrossel-casas{
-  display: flex; 
-  flex-direction: row; 
+.hogwarts-section {
+  display: flex;
+  gap: 28px;
   align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
-.carrossel-casas button{
+.hogwarts-section p {
+  text-align: left;
+  max-width: 520px;
+  font-size: 1.6rem;
+}
+
+.hogwarts-section img {
+  width: 520px;
+  max-width: 52vw;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.carrossel-casas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 18px 24px;
+  border-radius: 30px;
+  border: none;
+  position: relative;
+  isolation: isolate;
+}
+
+.carrossel-casas::before {
+  content: '';
+  position: absolute;
+  inset: 18px 24px 12px;
+  border-radius: 20px;
+  background: radial-gradient(circle at center, rgba(211, 166, 37, 0.22), transparent 70%);
+  filter: blur(18px);
+  z-index: -1;
+}
+
+.card-casas-layout {
+  animation: carrossel-brilho 3.8s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-casas-layout:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 26px 62px rgba(0, 0, 0, 0.42);
+}
+
+.carrossel-casas button {
   background: none;
   border: none;
   cursor: pointer;
 }
 
-.carrossel-casas button:hover{
+.carrossel-casas button:hover {
   transform: scale(110%);
 }
 
-#seta-esquerda{
-  width: 100px;
-  height: 100px;
-}
-#seta-direita{
+#seta-esquerda {
   width: 100px;
   height: 100px;
 }
 
-.secao1{
+#seta-direita {
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes carrossel-brilho {
+
+  0%,
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.24);
+  }
+
+  50% {
+    transform: translateY(-20px);
+    box-shadow: 0 26px 64px rgba(0, 0, 0, 0.42);
+  }
+}
+
+.secao1 {
   background-color: var(--roxo-secao1);
   width: 100%;
   border-bottom: 2px solid #413188;
 }
 
-.secao2{
+.secao2 {
   background-color: var(--roxo-escuro);
   width: 100%;
   border-bottom: 2px solid #413188;
+  position: relative;
+  overflow: hidden;
 }
+
+.secao2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at left top, rgba(227, 176, 98, 0.16), transparent 32%),
+    radial-gradient(circle at right bottom, rgba(242, 227, 255, 0.08), transparent 30%);
+  pointer-events: none;
+}
+
+.secao2 .boxes {
+  position: relative;
+  z-index: 1;
+}
+
+.secao2 .box-hogwarts {
+  width: min(1100px, 100%);
+  padding: 26px 32px 34px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(6px);
+}
+
+.secao2 .box:not(.box-hogwarts) {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  padding: 0;
+  width: auto;
+}
+
 /* FOOTER */
 
 .footer {
@@ -288,7 +421,7 @@ h1 {
 
 .login {
   height: var(--tamanho-login);
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  background-image: url('../assets/imgs/bg-login-cadastro.png');
   background-size: cover;
 }
 
@@ -299,15 +432,15 @@ h1 {
 }
 
 .card {
-  width: 50%;
+  width: 35%;
   background-color: #e5e5e5;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: palevioletred;
+  color: rgb(255, 238, 244);
   flex-direction: column;
-  height: fit-content;
+  height: 75%;
   padding: 20px 0;
 }
 
@@ -384,7 +517,7 @@ h1 {
 
 /* FORMULARIO */
 
-.alerta_erro{
+.alerta_erro {
   display: flex;
   justify-content: flex-end;
 }
@@ -401,7 +534,7 @@ h1 {
   margin-right: 10%;
 }
 
-.card_erro #mensagem_erro{
+.card_erro #mensagem_erro {
   font-weight: 500;
   font-size: 20px;
 }
@@ -457,7 +590,7 @@ input {
 
 .simulador .container {
   flex-direction: column;
-  overflow: scroll; 
+  overflow: scroll;
   height: var(--tamanho-simulador);
 }
 
@@ -501,9 +634,23 @@ input {
 }
 
 @keyframes bell {
-  0%   {transform: rotate(25deg)}
-  25%  {transform: rotate(-25deg)}
-  50%  {transform: rotate(25deg)}
-  75%  {transform: rotate(-25deg)}
-  100% {transform: rotate(25deg)}
+  0% {
+    transform: rotate(25deg)
+  }
+
+  25% {
+    transform: rotate(-25deg)
+  }
+
+  50% {
+    transform: rotate(25deg)
+  }
+
+  75% {
+    transform: rotate(-25deg)
+  }
+
+  100% {
+    transform: rotate(25deg)
+  }
 }

@@ -45,25 +45,50 @@
             </div>
         </div>
         <div class="container">
-            <div class="card card-login">
-                <h2>Olá de volta!</h2>
-                <div class="formulario">
-                    <div class="campo">
-                        <span>E-mail:</span>
-                        <input id="email_input" type="text" placeholder="Login">
+            <div class="card">
+
+                <div class="card-login-esquerda">
+                    <p class="card-login-esquerda-logo">Harry Potter</p>
+                    <div class="card-login-esquerda-citacao">
+                        <p>"Não são nossas habilidades que mostram quem realmente somos, são nossas escolhas."</p>
+                        <span>— Alvo Dumbledore</span>
                     </div>
-                    <div class="campo">
-                        <span>Senha:</span>
-                        <input id="senha_input" type="password" placeholder="******">
-                    </div>
-                    <button class="botao" onclick="entrar()">Entrar</button>
+                    <p class="card-login-esquerda-badge">Heitor Galdino Traspadini © 2026</p>
                 </div>
 
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                <div class="card-login-right">
+                    <h2>Olá de volta!</h2>
+                    <p class="card-login-subtitle">Acesse sua conta</p>
+
+                    <div class="formulario">
+                        <div class="campo">
+                            <span>E-mail</span>
+                            <input id="email_input" type="text" placeholder="seu@email.com">
+                        </div>
+                        <div class="campo">
+                            <span>Senha</span>
+                            <input id="senha_input" type="password" placeholder="••••••••">
+                        </div>
+
+                        <div class="card-login-row">
+                            <label class="card-login-remember">
+                                <input type="checkbox" style="width:auto;height:auto;margin:0;border:none;"> Lembrar de
+                                mim
+                            </label>
+                            <a href="#" class="card-login-forgot">Esqueceu a senha?</a>
+                        </div>
+
+                        <button class="botao" onclick="entrar()">Entrar</button>
+                    </div>
+
+                    <p class="card-login-signup">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+
+                    <div id="div_aguardar" class="loading-div">
+                        <img src="./assets/circle-loading.gif" id="loading-gif">
+                    </div>
+                    <div id="div_erros_login"></div>
                 </div>
 
-                <div id="div_erros_login"></div>
             </div>
         </div>
     </div>

@@ -19,5 +19,13 @@ CREATE TABLE usuario (
 	senha VARCHAR(100) NOT NULL
 );
 
+CREATE TABLE quiz_resultado (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	id_usuario INT NOT NULL,
+	casa VARCHAR(50) NOT NULL,
+	data_resposta TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	FOREIGN KEY (id_usuario) REFERENCES usuario(id)
+);
+
 INSERT INTO usuario (nome, email, senha)
 VALUES ('Usuario Teste', 'usuario@teste.com', '123456');

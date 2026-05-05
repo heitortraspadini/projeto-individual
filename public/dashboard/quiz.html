@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Qual é a sua Casa?</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+    <script src="../js/sessao.js"></script>
+    <script src="../js/quiz.js"></script>
+</head>
+
+<body>
+    <div class="container-quiz">
+        <div class="quiz-header">
+            <h1>Quiz das Casas</h1>
+            <p>Descubra qual é a sua casa!</p>
+            <p style="display:none"><span id="b_usuario"></span></p>
+        </div>
+
+        <div class="barra-progresso">
+            <div class="barra-preencher" id="barraProgressao"></div>
+        </div>
+
+        <div id="containerQuiz">
+            <div class="questao-container">
+                <div class="questao-number" id="numeroQuestao"></div>
+                <div class="questao-text" id="textoQuestao"></div>
+                <div class="options" id="containerOpcoes"></div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn-prev" id="botaoAnterior" onclick="previousquestao()" style="display: none;">←
+                    Anterior</button>
+                <button class="btn-next" id="botaoProximo" onclick="nextquestao()" disabled>Próxima →</button>
+            </div>
+        </div>
+
+        <div class="loading" id="containerCarregando">
+            <p>Processando seu resultado...</p>
+            <div class="spinner"></div>
+        </div>
+
+        <div class="result-container" id="containerResultado">
+            <h2>Parabéns!</h2>
+            <div class="casa-icon" id="iconeCasa"></div>
+            <h3 id="nomeCasa"></h3>
+            <p id="descricaoCasa"></p>
+            <div class="casas-info">
+                <p id="infoCasa"></p>
+            </div>
+            <button class="btn-restart" onclick="restartQuiz()">Fazer o Quiz Novamente</button>
+        </div>
+    </div>
+</body>
+
+</html>

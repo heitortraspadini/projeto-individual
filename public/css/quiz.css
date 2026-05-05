@@ -1,0 +1,196 @@
+.container-quiz {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: purple;
+    padding: 30px;
+    color: white;
+}
+
+.quiz-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.quiz-header h1 {
+    font-size: 2.5em;
+    margin: 0 0 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-header p {
+    font-size: 1.1em;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.questao-container {
+    margin-bottom: 30px;
+}
+
+.questao-number {
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.questao-text {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-label {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.05em;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-next {
+    background-color: #4CAF50;
+    color: white;
+    flex: 1;
+    max-width: 150px;
+}
+
+.btn-prev {
+    background-color: #2196F3;
+    color: white;
+    flex: 1;
+    max-width: 150px;
+}
+
+.barra-progresso {
+    width: 100%;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.barra-preencher {
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
+}
+
+.result-container {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    display: none;
+}
+
+.result-container.show {
+    display: block;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.casa-icon {
+    font-size: 4em;
+    margin: 20px 0;
+}
+
+.result-container h2 {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.result-container p {
+    font-size: 1.1em;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.btn-restart {
+    background-color: #FF9800;
+    color: white;
+    padding: 12px 25px;
+    margin-top: 20px;
+}
+
+.btn-restart:hover {
+    background-color: #e68900;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
+}
+
+.loading {
+    text-align: center;
+    display: none;
+}
+
+.loading.show {
+    display: block;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid white;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.casas-info {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.casas-info p {
+    margin: 5px 0;
+}

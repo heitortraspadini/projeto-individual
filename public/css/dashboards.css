@@ -196,7 +196,7 @@ body {
   color: white;
 }
 
-.card-aquario {
+.card-grafico {
   margin: 2%;
   min-width: 40%;
   max-width: 50%;
@@ -210,29 +210,29 @@ body {
   font-size: 20px;
 }
 
-.card-aquario h1 {
+.card-grafico h1 {
   width: fit-content;
 }
 
-.card-aquario p {
+.card-grafico p {
   margin: 0;
   font-size: 50px;
   font-weight: lighter;
   text-align: left;
 }
 
-.desc-aquario {
+.desc-grafico {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
 }
 
-.desc-aquario .cor-alerta {
+.desc-grafico .cor-alerta {
   width: 30px;
 }
 
-.title-aquario {
+.title-grafico {
   width: 100%;
 }
 
@@ -259,7 +259,7 @@ body {
   display: inline-block;
 }
 
-.btns-dash {
+.botoes-painel {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -332,12 +332,12 @@ canvas {
   /* width: 100vw; */
 }
 
-.header-left a {
+.cabecalho-esquerdo a {
   text-decoration: none;
   color: white;
 }
 
-.header-left {
+.cabecalho-esquerdo {
   position: fixed;
   top: 0;
   left: 0;
@@ -364,23 +364,23 @@ canvas {
   overflow: auto;
 }
 
-.header-left h1 {
+.cabecalho-esquerdo h1 {
   color: #32b9cd;
 }
 
-.hello {
+.saudacao {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.hello h3 {
+.saudacao h3 {
   color: #e3b062;
   font-weight: 300;
   font-size: 1.2rem;
 }
 
-.hello h3 span {
+.saudacao h3 span {
   font-weight: 800;
 }
 
@@ -393,7 +393,7 @@ canvas {
   padding: 2% 5%;
 }
 
-.btn-nav-white {
+.btn-navegacao-branco {
   width: 40%;
   background-color: white;
   border: 3px solid #e6005a;
@@ -402,19 +402,19 @@ canvas {
   padding: 2% 5%;
 }
 
-.btn-nav-white h3 {
+.btn-navegacao-branco h3 {
   color: #e6005a;
   padding: 0;
   margin: 0;
 }
 
 .btn-nav h3,
-.btn-logout h3 {
+.btn-sair h3 {
   margin: 0;
   padding: 0;
 }
 
-.btn-logout {
+.btn-sair {
   margin: 0;
   padding: 0;
   width: 20%;
@@ -425,4 +425,185 @@ canvas {
   padding: 10px 15px;
   margin-bottom: 100px;
   cursor: pointer;
+}
+
+.secao-ranking {
+  margin-top: 40px;
+}
+
+.container-ranking {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.container-ranking h2 {
+  color: #333;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.8em;
+}
+
+.titulo-ranking {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titulo-ranking h1 {
+  color: #667eea;
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.chart-container {
+  position: relative;
+  height: 400px;
+  margin-bottom: 30px;
+}
+
+.lista-ranking {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.ranking-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ranking-card:hover {
+  transform: translateY(-5px);
+}
+
+.ranking-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ranking-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.ranking-position {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.ranking-casa_hogwarts-icon {
+  font-size: 3em;
+  margin: 15px 0;
+}
+
+.ranking-casa_hogwarts-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.ranking-count {
+  font-size: 1.8em;
+  margin: 15px 0;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.casa-griforia {
+  background: linear-gradient(135deg, #FF6B35 0%, #D92E1D 100%) !important;
+}
+
+.casa-corvinal {
+  background: linear-gradient(135deg, #004E89 0%, #003459 100%) !important;
+}
+
+.casa-lufa-lufa {
+  background: linear-gradient(135deg, #F0B000 0%, #D89E00 100%) !important;
+}
+
+.casa-sonserina {
+  background: linear-gradient(135deg, #00A651 0%, #007C41 100%) !important;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.stat-item {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  border-left: 4px solid #667eea;
+}
+
+.stat-item h4 {
+  margin: 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.stat-item p {
+  margin: 10px 0 0 0;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .ranking-list {
+    grid-template-columns: 1fr;
+  }
 }

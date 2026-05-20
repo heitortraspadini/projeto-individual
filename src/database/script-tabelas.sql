@@ -6,9 +6,9 @@
 comandos para mysql server
 */
 
-CREATE DATABASE IF NOT EXISTS aquatech;
+CREATE DATABASE IF NOT EXISTS harrypotter;
 
-USE aquatech;
+USE harrypotter;
 
 DROP TABLE IF EXISTS usuario;
 

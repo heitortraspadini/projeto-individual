@@ -429,6 +429,11 @@ canvas {
 
 .secao-ranking {
   margin-top: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  flex-direction: row;
+  width: 80%;
 }
 
 .container-ranking {
